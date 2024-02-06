@@ -1,0 +1,212 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;  
+}
+.static_notice {
+    border-radius: 3px;
+    padding: 20px;
+    height: auto;
+    overflow-y: hidden;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.90)),url('https://sb.kaleidousercontent.com/67418/1920x1920/208edb4703/mylene-tremoyet-da0pdcekeus-unsplash.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-image: linear-gradient(rgb(151 151 151 / 80%), rgb(2 1 1 / 90%));
+}
+.container_style{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.90)),url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTz5sZjEZkiZG6p7Ewza13rlzeRkTPzFUwRooN1BcjYIGywMkdo');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* .email-intput-for-sub{
+    position: relative;
+}
+.subscribe-section{
+    width: 50%;
+    align-items: center;
+}
+.subscribe-btn{
+    border: none;
+    padding: 16px 30px;
+    border-radius: 10%;
+    background-color: red;
+    position: absolute;
+    left: 77%;
+}
+@media only screen and (max-width: 600px){
+    .subscribe-btn {
+    left: 65%;
+}}
+@media only screen and (max-width: 600px){
+    .subscribe-section {
+        width: 100% !important;
+        align-items: center;
+}} */
+
+
+
+
+/* contact page */
+.wrap-contact100 {
+    width: 670px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.contact100-form-title {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 64px 15px;
+}
+.contact100-form {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 43px 88px 57px 190px;
+}
+.contact100-form-title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(54,84,99,.7);
+}
+.contact100-form-title-1 {
+    font-family: Poppins-Bold;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 7px;
+}
+.contact100-form-title-2 {
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.5;
+    text-align: center;
+}
+.contact100-form {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 43px 88px 57px 190px;
+}
+.validate-input {
+    position: relative;
+}
+.wrap-input100 {
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #b2b2b2;
+    margin-bottom: 26px;
+}
+.container-contact100-form-btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 8px;
+}
+.label-input100 {
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    color: gray;
+    line-height: 1.2;
+    text-align: right;
+    position: absolute;
+    top: 14px;
+    left: -105px;
+    width: 80px;
+}
+input.input100 {
+    height: 45px;
+}
+.input100 {
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    background: 0 0;
+    padding: 0 5px;
+    border: none;
+}
+.contact100-form-btn:hover {
+    background-color: #333;
+}
+button:hover {
+    cursor: pointer;
+}
+.contact100-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 50px;
+    background-color: #57b846;
+    border-radius: 25px;
+    font-family: Poppins-Regular;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    -moz-transition: all .4s;
+    transition: all .4s;
+}
