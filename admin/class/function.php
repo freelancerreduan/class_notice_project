@@ -62,26 +62,36 @@ class personal
     //==============notice add ==============
     public function notce_area($data){
         $notice_title = $data['notice_title'];
-        $notice_link = $data['notice_link'];
-        $query = "INSERT INTO notice_area(notice_title,notice_link) VALUE ('$notice_title','$notice_link')";
+        $pdf_file_notice = $_FILES['pdf_file_notice']['name'];
+        $pdf_file_notice_tmp = $_FILES['pdf_file_notice']['tmp_name'];
+        $query = "INSERT INTO notice_area(notice_title,notice_date,notice_pdf) VALUE ('$notice_title',now(),'$pdf_file_notice')";
         if(mysqli_query($this->conn, $query)) {
-            return "Service counter add Successfullt";
+            move_uploaded_file($pdf_file_notice_tmp,"pdf_upload/".$pdf_file_notice);
+            return "<script> alert('Notice add Successfullt'); </script>";
         }
     }
 
     // ============== notice display  =============
-    // public function notice_display(){ 
-    //     $query = "SELECT * FROM notice_area ORDER BY notice_id DE LIMIT 5";
-    //     if(mysqli_query($this->conn, $query)) {
-    //         $view = mysqli_query($this->conn, $query);
-    //         return $view;
-    //     }
+    public function notice_display(){ 
+        $query = "SELECT * FROM notice_area ORDER BY notice_id DESC LIMIT 20";
+        if(mysqli_query($this->conn, $query)) {
+            $view = mysqli_query($this->conn, $query);
+            return $view;
+        }
 
-    // }
+    }
 
     // display in font-end
     public function notice_display_limited(){ 
         $query = "SELECT * FROM notice_area ORDER BY notice_id DESC LIMIT 5";
+        if(mysqli_query($this->conn, $query)) {
+            $view = mysqli_query($this->conn, $query);
+            return $view;
+        }
+
+    }
+    public function all_notice(){ 
+        $query = "SELECT * FROM all_notice";
         if(mysqli_query($this->conn, $query)) {
             $view = mysqli_query($this->conn, $query);
             return $view;
@@ -102,10 +112,13 @@ class personal
     // latest notice area
     public function latest_notce_area($data){
         $latest_notice_title = $data['latest_notice_title'];
-        $latest_notice_link = $data['latest_notice_link'];
-        $query = "INSERT INTO latest_notice(lt_title,lt_link) VALUE ('$latest_notice_title','$latest_notice_link')";
+        // $latest_notice_link = $data['latest_notice_link'];
+        $pdf_file = $_FILES['pdf_file']['name'];
+        $pdf_file_tmp = $_FILES['pdf_file']['tmp_name'];
+        $query = "INSERT INTO latest_notice(lt_title,lt_pdf) VALUE ('$latest_notice_title','$pdf_file')";
         if(mysqli_query($this->conn, $query)) {
-            return " Letest add Successfullt";
+            move_uploaded_file($pdf_file_tmp,"pdf_upload/".$pdf_file);
+            return " <script> alert('Letest add Successfullt'); </script>";
         }
     }
 
@@ -116,6 +129,14 @@ class personal
         if(mysqli_query($this->conn, $query)) {
             $view = mysqli_query($this->conn, $query);
             return $view;
+        }
+    }
+   public function latest_notice_download(){ 
+    $query = "SELECT * FROM latest_notice";
+        if(mysqli_query($this->conn, $query)) {
+            $view = mysqli_query($this->conn, $query);
+            $info = mysqli_fetch_assoc($view);
+            return $info;
         }
     }
    public function latest_notice_display_limited(){ 
@@ -142,7 +163,7 @@ class personal
         $sub_email = $data['sub_email'];
         $query = "INSERT INTO subscribe(sub_email) VALUE ('$sub_email')";
         if(mysqli_query($this->conn, $query)) {
-            return " Subscription Successfully";
+            return "<script> alert('Subscription Successfully');</script> ";
         }
     }
 
@@ -152,7 +173,7 @@ class personal
     public function letest_notice_delete($id){
         $query ="DELETE FROM latest_notice WHERE latest_notice_id =$id";
         if(mysqli_query($this->conn, $query)) { 
-            return "Delete Successfully";
+            return "<script> alert('Delete Successfully');</script> ";
         }
     }
 
@@ -178,7 +199,7 @@ class personal
             $slider_img_tmp = $_FILES['slider_img']['tmp_name'];
             $query = "INSERT INTO slider(slider_img,slider_link) VALUE ('$slider_img','$slider_link')";
             if(mysqli_query($this->conn, $query)) {
-                move_uploaded_file($slider_img_tmp,"upload/".$slider_img);
+                move_uploaded_file($slider_img_tmp,"pdf_upload/".$slider_img);
                 return " Slider add Successfully";
             }
         }

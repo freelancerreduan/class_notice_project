@@ -27,21 +27,22 @@ if(isset($_POST['subscribe_now'])){
         </div>
         <div class="latestnews">
         <marquee behavior="scroll" align="center" direction="up" scrollamount="1" scrolldelay="30" truespeed="" onmouseover="this.setAttribute('scrollamount', 0, 0);" onmouseout="this.setAttribute('scrollamount', 1, 0);" >
-        <ul>
+        <ul style="height: 15vh;">
             <?php while($notice = mysqli_fetch_assoc($notic_info)){ ?>
             <li class="d-flex align-items-center mt-4">
                 <i class="fa-sharp fa-solid fa-circle-check me-2"></i>
                     <div class="menu_link ">
-                        <a target="_blank" class="text-white" href="<?php echo $notice['lt_link']; ?>" class="">
-                            <?php echo $notice['lt_title']; ?>
+                        <a class="text-white" href="download.php?id=<?php echo $notice['latest_notice_id']; ?>" class="">
+                            <?php echo substr($notice['lt_title'],0,55); ?>
                         </a>
+                        
                     </div>
                 <div class="clear"></div>
             </li>
             <?php } ?>
         </ul>
     </marquee>
-    <span class="more"><a href="https://www.dpp.gov.bd/bgpress/index.php/page/news">view all</a></span>
+    <span class="more"><a href="notice.php">view all</a></span>
     <p>&nbsp;</p>
 </div>
         <form action="" method="post">

@@ -29,7 +29,7 @@
 <div class="my_slider mb-3 mt-3">
   <?php while($slider = mysqli_fetch_assoc($slider_info)){ ?>
     <div class="text-white">
-        <a href="<?php echo $slider['slider_link']; ?>" class="">
+        <a target="_blank" href="<?php echo $slider['slider_link']; ?>" class="">
         <img src="admin/upload/<?php echo $slider['slider_img']; ?>" style="height: 40vh; width: 100%; border-radius: 10px; " alt="" class="slick_slider">
         </a>
     </div>

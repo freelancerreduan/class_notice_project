@@ -41,13 +41,17 @@ $obj = new personal();
     <?php if(isset($msg)){ echo $msg; } ?>
     <div class="form-group">
         <label for="notice">Enter Notice Title:</label>
-        <input class="form-control" type="text" name="notice_title" id="notice_title" placeholder="Maximum Letter in 50...">
+        <input class="form-control" type="text" name="notice_title" id="notice_title" placeholder="Maximum Letter in 50..." required>
     </div>
     <div class="form-group">
-        <label for="notice">Enter Notice Link:</label>
+        <label for="notice">Enter Notice Link: (Optional: Plase 1 Item Select in PDF OR URL ) </label>
         <input class="form-control" type="text" name="notice_link" id="notice_link" placeholder="Exmple: https://demo.com">
+    </div>
+    <div class="form-group">
+        <label for="notice">Upload PDF File: (Optional: Plase 1 Item Select in PDF OR URL )</label>
+        <input type="file" name="pdf_file_notice" class="form-control" accept=".pdf" title="Upload PDF"/>
     </div>
     
     
-    <input type="submit" name="notice_add" value="Add Protfolio" class="btn btn-primary btn-block" placeholder="Enter Your Notice Description...">
+    <input type="submit" name="notice_add" value="Add Main Notice" class="btn btn-primary btn-block">
 </form
