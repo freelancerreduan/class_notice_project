@@ -79,8 +79,8 @@ function send_email($to_email) {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com'; 
     $mail->SMTPAuth = true;
-    $mail->Username = 'freelancerreduan100@gmail.com';
-    $mail->Password = 'ygdenlpfsjdqgcsj'; 
+    $mail->Username = 'demo@gmail.com';
+    $mail->Password = 'sfdfsvdf'; 
     $mail->SMTPSecure = 'tls'; 
     $mail->Port = 587; 
 
