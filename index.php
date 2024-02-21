@@ -31,9 +31,9 @@ $obj = new personal();
 <?php include_once("include/head.php"); ?>
 <?php include_once("include/top_nav.php"); ?>
 <div class="container">
-    <div class="shadow rounded ">
+    <div class=" rounded ">
         <section class="notice_section">
-            <h2 class="text-center text-success mt-5" style="font-family: cursive;">NPI POLYTECHNIC NOTICE BOARD</h2>
+            <h1 class="text-center text- mt-5 fw-bold" style="">NATIONAL POLYTECHNIC NOTICE BOARD</h1>
             <?php include_once("include/anounsment.php");  ?>
             <?php include_once("include/slider.php"); ?>
             <div class="row">

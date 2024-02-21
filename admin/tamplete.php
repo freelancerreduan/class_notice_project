@@ -32,13 +32,12 @@ if (isset($_GET['admin_logout'])) {
 <div class="container-scroller">
   <?php include_once("include/navbar.php"); ?>
 
-  <div class="container-fluid page-body-wrapper">
+  <div class="container-fluid page-body-wrapper ">
 
     <?php include_once("include/side_nav.php"); ?>
     <div class="main-panel">
       <div class="content-wrapper">
-        <div class="">
-          <?php
+      <?php
           if (isset($view)) {
             if ($view == "dashboard") {
               include('view/dashboard_view.php');
@@ -62,16 +61,10 @@ if (isset($_GET['admin_logout'])) {
               include('view/slider_area_view.php');
             }
             
-
-
-
-
           }
-
-
-
-
           ?>
-        </div>
       </div>
-      <?php include_once("include/footer.php"); ?>
+    </div>
+  </div>
+</div>
+<?php include_once("include/footer.php"); ?>

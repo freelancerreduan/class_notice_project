@@ -26,10 +26,11 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
-    background-image: linear-gradient(rgb(151 151 151 / 80%), rgb(2 1 1 / 90%));
+    /* background-image: linear-gradient(rgb(151 151 151 / 80%), rgb(2 1 1 / 90%)); */
 }
 .container_style{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.90)),url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTz5sZjEZkiZG6p7Ewza13rlzeRkTPzFUwRooN1BcjYIGywMkdo');
+    /* background-image: linear-gradient(rgba(128, 127, 127, 0.8), rgba(255, 255, 255, 0.9)); */
+    background-color: #d9d9d9 !important;
     height: 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;

@@ -55,20 +55,17 @@ $counter= 0;
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Notice Title </th>
-                        <th scope="col">Notice Link</th>
-
                         <th scope="col">ACTION</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php while($info_display = mysqli_fetch_assoc($notice_display)){ $counter++; ?>
                         <tr style="height: 20px !important; ">
-                            <th scope="row" style=""> <?php echo $counter; ?></th>
-                            <td class="" style="max-width: 130px !important; overflow:hidden; white-space: normal;"><?php echo $info_display['notice_title']?> </td>
-                            <td class="" style="max-width: 130px !important; overflow:hidden; white-space: normal;"><?php echo $info_display['notice_link']?> </td>
+                            <th scope="row" style="width: 1%;"> <?php echo $counter; ?></th>
+                            <td class="" style="max-width: 130px !important; overflow:hidden; white-space: normal; width :80%;"><?php echo $info_display['notice_title']?> </td>
                             <td>
-                                <a href="post_edite.php?status=post_edite&&id=<?php echo $info_display['notice_id']?>" class="btn btn-primary btn-block">Edite</a>
-                                <a href="?status=notice_deleted&&id=<?php echo $info_display['notice_id']; ?>" class="btn btn-danger btn-block">Delete</a>
+                                <a href="post_edite.php?status=post_edite&&id=<?php echo $info_display['notice_id']?>" class="btn btn-primary shadow normal">Edite</a>
+                                <a href="?status=notice_deleted&&id=<?php echo $info_display['notice_id']; ?>" class="btn btn-danger ">Delete</a>
                             </td>
                         </tr>
                     <?php } ?>

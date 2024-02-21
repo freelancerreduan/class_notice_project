@@ -1,5 +1,21 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="top_navbar ">
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #424242!important;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #dbdbdb; box-shadow:9px 15px 86px #888888 !important;">
         <div class="container-fluid">
             <a class="navbar-brand text-danger h3 text-uppercase fw-bold" href="index.php" style="font-family: 'FontAwesome';">NPI Polytechnic</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

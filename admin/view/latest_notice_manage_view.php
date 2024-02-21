@@ -20,7 +20,7 @@
 
 $obj = new personal();
     if(isset($_POST['ab_skill_add'])){
-        $msg = $obj-> ab_skill($_POST);
+        // $msg = $obj-> ab_skill($_POST);
     }
 
 $lt_notice_display  = $obj-> latest_notice_display();
@@ -43,16 +43,13 @@ if(isset($_GET['status'])){
     <div class="shadow-lg p-3 mb-5 bg-white rounded">
         <?php if(isset($msg)){ echo $msg; } ?>
         <div class="table-responsive">
-            <h3 class="text-center text-danger mb-5">Manage About Area</h3> <hr>
+            <h3 class="text-center text-danger mb-5">Manage Latest Area</h3> <hr>
             <table class="table ">
                 <thead>
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Latest Title </th>
-                        <th scope="col">Latest Description</th>
-                        <th scope="col">Latest Img</th>
-
-                        <th scope="col">ACTION</th>
+                        <th scope="col" style="width: 1%;"> ID.NO </th>
+                        <th scope="col" style="width:80%;">Latest Notice Title </th>
+                        <th scope="col" style="">ACTION</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -60,11 +57,10 @@ if(isset($_GET['status'])){
                         <tr style="height: 20px !important;">
                             <th scope="" style=""><?php echo $lt_info_display['latest_notice_id']; ?></th>
                             <td class="" style="max-width: 117px !important; overflow:hidden; white-space: normal;"><?php echo $lt_info_display['lt_title']; ?> </td>
-                            <td class="" style="max-width: 117px !important; overflow:hidden; white-space: normal;"><?php echo $lt_info_display['lt_link']; ?> </td>
-
+                            <!-- <embed src="pdf_upload/1.pdf" type="application/pdf" width="100%" height="60px" /> -->
                             <td>
-                                <a href="post_edite.php?status=post_edite&&id=<?php echo $lt_info_display['latest_notice_id']; ?>" class="btn btn-primary btn-block">Edite</a>
-                                <a href="?status=letest_notice_delete&&id=<?php echo $lt_info_display['latest_notice_id']; ?>" class="btn btn-danger btn-block">Delete</a>
+                                <a hpost_edite.php?status=post_edite&&id=<?php echo $lt_info_display['latest_notice_id']; ?>" class="btn btn-primary ">Edite</a>
+                                <a href="?status=letest_notice_delete&&id=<?php echo $lt_info_display['latest_notice_id']; ?>" class="btn btn-danger ">Delete</a>
                             </td>
                         </tr>
                     <?php } ?>
